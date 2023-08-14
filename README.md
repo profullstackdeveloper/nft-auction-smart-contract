@@ -168,4 +168,4 @@ All files        |    95.45 |    84.38 |    92.31 |    93.33 |                |
 -----------------|----------|----------|----------|----------|----------------|
 ```
 
-According to the result, we can see that 87.5 percent of branches are covered in current test cases for NFTAuction.sol file.
+According to the result, we can see that 86.67 percent of branches are covered in current test cases for NFTAuction.sol file.
