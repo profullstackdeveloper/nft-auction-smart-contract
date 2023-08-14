@@ -16,9 +16,6 @@ describe("NFTAuction", function () {
         const TestNFTContract = await ethers.getContractFactory("TestNFT");
         const testNFTContract = await TestNFTContract.connect(owner).deploy("TestNFT", "TN");
 
-        const MakeBidAttackContract = await ethers.getContractFactory("MakeBidAttack");
-        const makeBidAttackContract = await MakeBidAttackContract.connect(user1).deploy();
-
         // mint 1, 2 token to owner
         await testNFTContract.connect(owner).mint(owner.address, 1);
         await testNFTContract.connect(owner).mint(owner.address, 2);
@@ -27,7 +24,7 @@ describe("NFTAuction", function () {
 
         await testNFTContract.connect(owner).mint(user1.address, 3);
 
-        return { nftAuctionContract, testNFTContract, owner, user1, user2, makeBidAttackContract }
+        return { nftAuctionContract, testNFTContract, owner, user1, user2 }
     }
 
 
